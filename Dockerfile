@@ -14,6 +14,6 @@ WORKDIR /home/jupyter
 COPY  /notebooks ./
 
 SHELL [ "/bin/sh" ]
-ENV PATH="/home/appuser/.local/bin:${PATH}"
-ENV PYTHONPATH="/home/appuser/.local/lib/python3.8/site-packages"
-RUN /home/appuser/.local/bin/jupyter notebook --port="${PORT:=8000}" --ip=*
+ENV PATH="$HOME/.local/bin:${PATH}"
+ENV PYTHONPATH="$HOME/.local/lib/python3.8/site-packages"
+RUN $HOME/.local/bin/jupyter notebook --port=${PORT:=8000} --ip=*
