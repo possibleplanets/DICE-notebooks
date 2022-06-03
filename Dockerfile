@@ -13,5 +13,6 @@ RUN pip install -r requirements.txt
 WORKDIR /home/jupyter
 COPY  /notebooks ./
 
-ENV PATH="$HOME/.local/bin:${PATH}"
+ENV PATH="/home/appuser/.local/bin:${PATH}"
+ENV PYTHONPATH="/home/appuser/.local/lib/python3.8/site-packages"
 ENTRYPOINT /home/appuser/.local/bin/jupyter notebook --port="${PORT:=8000}" --ip=*
