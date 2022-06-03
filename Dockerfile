@@ -14,4 +14,4 @@ WORKDIR /home/jupyter
 COPY  /notebooks ./
 
 ENV PATH="$HOME/local/bin:${PATH}"
-ENTRYPOINT ["/home/appuser/.local/bin/jupyter", "notebook", "--port=8000", "--ip=*"]
+ENTRYPOINT ["/home/appuser/.local/bin/jupyter", "notebook", "--port=${PORT:=8000}", "--ip=*"]
