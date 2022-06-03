@@ -16,4 +16,4 @@ COPY  /notebooks ./
 SHELL [ "/bin/sh" ]
 ENV PATH="/home/appuser/.local/bin:${PATH}"
 ENV PYTHONPATH="/home/appuser/.local/lib/python3.8/site-packages"
-ENTRYPOINT ["/bin/bash", "-c", "/home/appuser/.local/bin/jupyter notebook --port=\"${PORT:=8000}\" --ip=*"]
+RUN /home/appuser/.local/bin/jupyter notebook --port="${PORT:=8000}" --ip=*
