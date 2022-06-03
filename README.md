@@ -1,4 +1,4 @@
-# DICE2016 Jupyter Notebook
+# DICE2016R Jupyter Notebook
 
 This is a Jupyter notebook demonstrating the DICE model for educational purposes.
 
@@ -23,3 +23,7 @@ Run the notebook inside a Docker container:
 docker build -t myimage .
 
 docker run -p 8000:8000 myimage
+
+# OK
+
+This is the most relevant paper: https://www.pnas.org/doi/pdf/10.1073/pnas.1609244114
