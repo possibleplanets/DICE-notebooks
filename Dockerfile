@@ -12,6 +12,7 @@ RUN pip install -r requirements.txt
 # RUN apt-get install -y coinor-libipopt-dev
 
 RUN conda install -c conda-forge ipopt
+RUN conda install -y ipykernel
 
 WORKDIR /home/jupyter
 COPY  /notebooks ./
