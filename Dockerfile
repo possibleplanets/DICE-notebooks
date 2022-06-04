@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 WORKDIR /home/jupyter
 COPY  /notebooks ./
 
-RUN jupyter notebook --port=${PORT:=8000} --ip=*
+CMD jupyter notebook --port=${PORT:=8000} --ip=*
