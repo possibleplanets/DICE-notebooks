@@ -8,8 +8,10 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # install ipopt
-RUN apt-get update
-RUN apt-get install -y coinor-libipopt-dev
+# RUN apt-get update
+# RUN apt-get install -y coinor-libipopt-dev
+
+RUN conda install -c conda-forge ipopt
 
 WORKDIR /home/jupyter
 COPY  /notebooks ./
