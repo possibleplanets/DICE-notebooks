@@ -7,6 +7,9 @@ COPY requirements.txt .
 # install dependencies
 RUN pip install -r requirements.txt
 
+# install ipopt
+RUN apt-get install -y coinor-libipopt-dev
+
 WORKDIR /home/jupyter
 COPY  /notebooks ./
 
