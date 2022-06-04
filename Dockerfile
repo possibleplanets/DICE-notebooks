@@ -1,5 +1,5 @@
 # set base image (host OS)
-FROM python:3.8
+FROM conda/miniconda3
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
@@ -14,4 +14,4 @@ RUN apt-get install -y coinor-libipopt-dev
 WORKDIR /home/jupyter
 COPY  /notebooks ./
 
-CMD jupyter notebook --port=${PORT:=8000} --ip=* --NotebookApp.token='' --NotebookApp.password=''
+CMD jupyter notebook --port=${PORT:=8000} --ip=* --NotebookApp.token='' --NotebookApp.password='' --allow-root
