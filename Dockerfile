@@ -13,6 +13,7 @@ RUN pip install -r requirements.txt
 
 RUN conda install -c conda-forge ipopt
 RUN conda install -y ipykernel
+RUN chmod -R 777 /opt/conda/lib/python3.9/site-packages/
 
 WORKDIR /home/jupyter
 COPY  /notebooks ./
