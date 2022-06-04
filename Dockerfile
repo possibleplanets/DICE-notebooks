@@ -1,5 +1,5 @@
 # set base image (host OS)
-FROM conda/miniconda3
+FROM continuumio/anaconda3 
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
