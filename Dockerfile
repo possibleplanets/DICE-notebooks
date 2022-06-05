@@ -14,7 +14,6 @@ RUN conda install --file requirements.txt
 RUN conda install -c conda-forge ipopt
 RUN conda install -y ipykernel
 RUN chmod -R 777 /opt/conda/lib/python3.9/site-packages/
-/opt/conda/lib/python3.9/site-packages/.wh.conda-4.12.0-py3.9.egg-info
 
 WORKDIR /home/jupyter
 COPY  /notebooks ./
